@@ -1,0 +1,13 @@
+@import '../../styles/_mq.scss';
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  // background-color: brown;
+
+  @include mq($until: tablet) {
+    background-color: blue;
+  }
+}
