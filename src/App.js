@@ -15,6 +15,7 @@ async function windows1251ResponseToUTF8Response(response) {
 const App = () => {
   const [data, setData] = useState()
   const [shop, setShop] = useState()
+  // console.log('shop', shop)
   // const [offers, setOffers] = useState()
   const [shownOffersCount, setShownOffersCount] = useState(10) 
 

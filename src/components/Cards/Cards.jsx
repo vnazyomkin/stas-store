@@ -9,8 +9,8 @@ const Cards = ({ cards }) => {
   // useStyles(s)
   return (
     <div className={cl.cards}>
-    {cards.map(({ picture, $: attributes, name, price_Roznica_Web: prices, vendorCode, quantity }) => (
-      <Card key={vendorCode} picture={picture && picture[0]} name={name} price={prices && prices[0]} quantity={quantity && quantity[0]} vendorCode={vendorCode}/>
+    {cards.map(({ picture: pictures, $: attributes, name, price_Roznica_Web: prices, vendorCode, quantity }) => (
+      <Card key={vendorCode} pictures={pictures} name={name} price={prices && prices[0]} quantity={quantity && quantity[0]} vendorCode={vendorCode}/>
     ))}
   </div>
   )
