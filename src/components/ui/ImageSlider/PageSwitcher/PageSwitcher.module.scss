@@ -1,0 +1,26 @@
+.page-switcher {
+
+  &__pages {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+
+    &--current {
+      background-color: darkcyan;
+      border-radius: 5px;
+    }
+  }
+}

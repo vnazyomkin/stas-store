@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 import cl from './Card.module.scss'
 import ImageSlider from '../ui/ImageSlider/ImageSlider'
 
