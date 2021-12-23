@@ -11,7 +11,7 @@ const Card = ({ pictures, name, price, vendorCode, quantity }) => {
       <ImageSlider pictures={filteredPictures} name={name}/>
     </div>
       <div className={cl['card__title']}>{name}</div>
-      <div className={cl['card__side-text']}>{`Количество: ${quantity[0]}`}</div>
+      <div className={cl['card__side-text']}>{`Количество: ${quantity}`}</div>
       <div className={cl['card__side-text']}>{`Артикул: ${vendorCode[0]}`}</div>
       <div className={cl['card__price']}>{`${price} руб.`}</div>
   </div>

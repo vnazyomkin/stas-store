@@ -23,4 +23,9 @@
       border-radius: 5px;
     }
   }
+
+  &__ellipsis {
+    display: flex;
+    align-items: center;
+  }
 }
