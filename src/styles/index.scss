@@ -12,11 +12,6 @@ code {
     monospace;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 1200px;
+* {
+  box-sizing: border-box;
 }
-
-// * {
-//   box-sizing:content-box;
-// }

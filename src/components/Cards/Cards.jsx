@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../Card/Card'
+import Card from './Card/Card'
 import cl from './Cards.module.scss'
 
 // const getClass = (el, mod) => `card${el ? '__' + el : ''}${mod ? '_' + mod : ''}`

@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import './App.css';
-import Catalog from './pages/Catalog';
+import './App.css'
+import Catalog from './pages/Catalog/Catalog'
 
 const App = () => (
   <div className="App">
@@ -9,4 +9,4 @@ const App = () => (
   </div>
 )
 
-export default App;
+export default App

@@ -1,0 +1,49 @@
+.menuBar {
+  width: 100%;
+}
+
+.menuItems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.menuItem {
+  height: 50px;
+  padding: 10px;
+  // box-sizing: border-box;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.dropList {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  // border: 1px solid darkcyan;
+  box-shadow:  0 4px 8px rgba(0, 0, 0, .2);
+  // border-top: none;
+}
+
+.categories {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.category {
+  padding: 5px;
+  margin: 0 5px 5px 0;
+  border: 1px solid darkcyan;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &--chosen {
+    background-color: yellow;
+  }
+}
