@@ -4,6 +4,7 @@ import cl from './PageSwitcher.module.scss'
 
 const getPageNumArray = (currentPage, maxNum) => {
   const result = [1]
+  if (maxNum === 1) return result
   for (let i = currentPage - 2; i < currentPage + 3; i++) {
     if (i > 1 && i < maxNum) result.push(i)
   }
