@@ -5,7 +5,6 @@ import cl from './Cards.module.scss'
 // const getClass = (el, mod) => `card${el ? '__' + el : ''}${mod ? '_' + mod : ''}`
 
 const Cards = ({ cards }) => {
-  console.log('cards', cards)
   // useStyles(s)
   return (
     <div className={cl.cards}>

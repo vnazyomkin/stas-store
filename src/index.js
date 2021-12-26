@@ -1,11 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { createStore } from 'redux'
-import { Provider } from 'react-redux';
-import './styles/index.scss';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import reducer from './store/app/reducer'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { applyMiddleware, combineReducers, compose, createStore } from 'redux'
+import { Provider } from 'react-redux'
+import thunk from 'redux-thunk'
+import './styles/index.scss'
+import App from './App'
+import reportWebVitals from './reportWebVitals'
+import dataReducer from './store/data/reducer'
 
 // const composeEnhancers =
 //   typeof window === 'object' &&
@@ -20,11 +21,21 @@ import reducer from './store/app/reducer'
 // )
 
 //const store = createStore(reducer)//, enhancer);
+const rootReducer = combineReducers({
+	data: dataReducer,
+})
 
-const store = createStore(
-  reducer, /* preloadedState, */
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-)
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+
+const store = createStore(rootReducer, /* preloadedState, */ composeEnhancers(
+  applyMiddleware(thunk)
+))
+
+// const store = createStore(
+//   rootReducer, /* preloadedState, */
+//   applyMiddleware(thunk),
+//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+// )
 
 // const store = createStore(reducer)
 

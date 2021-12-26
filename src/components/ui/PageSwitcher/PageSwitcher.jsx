@@ -14,9 +14,7 @@ const getPageNumArray = (currentPage, maxNum) => {
 const PageSwitcher = ({ itemCount,  shownItemCount, currentPage, setCurrentPage }) => {
   if (!itemCount) return null
   const maxNum = Math.ceil(itemCount / shownItemCount)
-  console.log('itemCount', itemCount)
   const pageNumArray = getPageNumArray(currentPage, maxNum)
-  console.log('pageNumArray', pageNumArray)
   return (
     <div className='page-switcher'>
       <ul className={cl['page-switcher__pages']}>

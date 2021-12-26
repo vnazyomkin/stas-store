@@ -1,11 +1,16 @@
 import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import classNames from 'classnames'
 import cl from './MenuBar.module.scss'
+import { selectCategories, selectShownCategories } from '../../../../store/data/reducer'
+import { changeShownCategories } from '../../../../store/data/action'
 
-const MenuBar = ({ categories, shownCategories, setShownCategories }) => {
+const MenuBar = () => {
+  const categories = useSelector(selectCategories)
+  const shownCategories = useSelector(selectShownCategories)
+  const dispatch = useDispatch()
+
   const [isDropListOpened, setDropListOpened] = useState(false)
-  console.log('categories', categories)
-  console.log('shownCategories', shownCategories)
   // console.log('categories', categories)
   const titles = Object.keys(categories)
 
@@ -25,9 +30,7 @@ const MenuBar = ({ categories, shownCategories, setShownCategories }) => {
               <li 
                 key={id}
                 className={classNames(cl.category, { [cl['category--chosen']]: shownCategories.includes(id) })}
-                onClick={() => setShownCategories((prevState) => (
-                  shownCategories.includes(id) ? prevState.filter(item => item !== id) : [...prevState, id]
-                ))}
+                onClick={() => dispatch(changeShownCategories(shownCategories.includes(id) ? shownCategories.filter(item => item !== id) : [...shownCategories, id]))}
               >{name}</li>
               ))}
             </ul>

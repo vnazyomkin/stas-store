@@ -3,11 +3,10 @@ import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import './App.css'
 import Catalog from './pages/Catalog/Catalog'
-import { loadDataStarted } from './store/app/action'
+import { loadDataStarted } from './store/data/action'
 
 const App = ({ loadData }) => {
   useEffect(() => {
-    console.log('loadData')
     loadData()
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])

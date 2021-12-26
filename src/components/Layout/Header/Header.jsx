@@ -2,11 +2,11 @@ import React from 'react'
 import cl from './Header.module.scss'
 import MenuBar from './MenuBar/MenuBar'
 
-const Header = ({ categories, className, shownCategories, setShownCategories }) => {
+const Header = ({ className }) => {
   return (
     <header className={className}>
       <div className={cl.lkBar}>СТАСЯМБА-СТОР</div>
-      <MenuBar categories={categories} shownCategories={shownCategories} setShownCategories={setShownCategories}/>
+      <MenuBar/>
     </header>
   )
 }
