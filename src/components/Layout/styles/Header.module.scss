@@ -1,0 +1,24 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.storeName {
+  font-size: 44px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chapterBlock {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.chapter {
+  cursor: pointer;
+}

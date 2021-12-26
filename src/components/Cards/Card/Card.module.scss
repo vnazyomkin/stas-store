@@ -1,6 +1,8 @@
 
 @import '../../../styles/_mq.scss';
 
+// $light-grey: rgb(163, 163, 163);
+
 .card {
   position: relative;
   width: 19%;
@@ -10,7 +12,8 @@
   align-items: center;
   margin: 10px 0;
   padding: 10px;
-  border: 1px solid gray;
+  border: 1px solid lightgray;
+  background-color: ghostwhite;
   // box-sizing: border-box;
 
   @include mq($until: tablet) {
@@ -27,6 +30,9 @@
     height: 170px;
     width: 100%;
     justify-content: center;
+    background-color: white;
+    border: 1px solid lightgray;
+    // color: lightgray
   }
 
   // &__img {
@@ -38,9 +44,11 @@
     font-size: 14px;
     font-weight: 700;
     text-align: center;
+    margin: 4px 0;
   }
 
   &__price {
+    margin-top: 4px;
     font-size: 18px;
     font-weight: 700;
   }

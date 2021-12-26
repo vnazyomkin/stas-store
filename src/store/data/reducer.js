@@ -40,6 +40,7 @@ const selectOffers = state => state.data.data.offers
 const selectIsLoading = state => state.data.isLoading
 const selectShownCategories = state => state.data.shownCategories
 const selectCategories = state => state.data.data.categories
+const selectParentCategories = state => state.data.data.parentCategories
 
 export {
   rootReducer as default,
@@ -47,4 +48,5 @@ export {
   selectIsLoading,
   selectShownCategories,
   selectCategories,
+  selectParentCategories,
 }

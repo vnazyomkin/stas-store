@@ -1,30 +1,29 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import classNames from 'classnames'
-import cl from './MenuBar.module.scss'
-import { selectCategories, selectShownCategories } from '../../../../store/data/reducer'
-import { changeShownCategories } from '../../../../store/data/action'
+import cl from '../styles/DropList.module.scss'
+import { selectCategories, selectParentCategories, selectShownCategories } from '../../../store/data/reducer'
+import { changeShownCategories } from '../../../store/data/action'
 
-const MenuBar = () => {
+const DropList = ({ isDropListOpened }) => {
   const categories = useSelector(selectCategories)
+  const parentCategories = useSelector(selectParentCategories)
   const shownCategories = useSelector(selectShownCategories)
   const dispatch = useDispatch()
 
-  const [isDropListOpened, setDropListOpened] = useState(false)
-  // console.log('categories', categories)
   const titles = Object.keys(categories)
 
   return (
-    <div className={cl.menuBar}>
-      <ul className={cl.menuItems}>
+    <>
+      {/* <ul className={cl.menuItems}>
         <li>
           <div className={cl.menuItem} onClick={() => setDropListOpened(prevState => !prevState)}>Каталог</div>
         </li>
-      </ul>
+      </ul> */}
       {isDropListOpened && <div className={cl.dropList}>
         {titles.map(title => (
           <div>
-            <h3>{title}</h3>
+            <div className={cl.title}>{parentCategories[title] ? parentCategories[title].name : 'Другие'}</div>
             <ul className={cl.categories}>
               {categories[title].map(({ name, id }) => (
               <li 
@@ -37,8 +36,9 @@ const MenuBar = () => {
           </div>
         ))}
       </div>}
-    </div>
+    </>
   )
 }
 
-export default MenuBar
+export default DropList
+

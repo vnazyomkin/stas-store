@@ -20,7 +20,6 @@ const Catalog = () => {
 
   return (
     <Layout>
-      {/* <Tags tags={categories}/> */}
       <Cards cards={filteredOffers.slice(shownItemCount * (currentPage - 1), shownItemCount * currentPage)}/>
       <PageSwitcher itemCount={filteredOffers && filteredOffers.length} shownItemCount={shownItemCount} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
     </Layout>
