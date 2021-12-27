@@ -1,12 +1,17 @@
-.dropList {
+.dropListContainer {
   max-width: 1200px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto;
   padding: 10px;
   background-color: white;
   box-shadow:  0 4px 8px rgba(0, 0, 0, .2);
-  // border-top: 1px solid lightgrey;
+}
+
+.dropList {
+  display: flex;
+  justify-content: space-between;
 }
 
 .title {

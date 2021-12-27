@@ -3,7 +3,6 @@ import Header from './components/Header'
 import cl from './styles/Layout.module.scss'
 
 const Layout = ({ children }) => {
-  console.log()
   return (
     <>
       <Header className={cl.header}/>

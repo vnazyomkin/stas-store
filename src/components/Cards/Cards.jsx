@@ -1,8 +1,7 @@
 import React from 'react'
 import Card from './Card/Card'
+import ErrorBlock from '../ui/ErrorBlock/ErrorBlock'
 import cl from './Cards.module.scss'
-
-// const getClass = (el, mod) => `card${el ? '__' + el : ''}${mod ? '_' + mod : ''}`
 
 const Cards = ({ cards }) => {
   
@@ -11,6 +10,9 @@ const Cards = ({ cards }) => {
     {cards.map(({ picture: pictures, $: attributes, name, price_Roznica_Web: prices, vendorCode, quantity }) => (
       <Card key={vendorCode} pictures={pictures} name={name} price={prices && prices[0]} quantity={quantity && quantity[0]} vendorCode={vendorCode}/>
     ))}
+    {!cards.length && 
+      <ErrorBlock errorText='Не выбрана категория товара. Посмотреть все категории можно в "Товары"'/>
+    }
   </div>
   )
 }

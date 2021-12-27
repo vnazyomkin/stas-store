@@ -4,6 +4,7 @@ import DropList from './DropList'
 // import MenuBar from './MenuBar/MenuBar'
 
 const Header = ({ className }) => {
+  console.log('Render Header')
   const [isDropListOpened, setDropListOpened] = useState(false)
 
   return (
@@ -19,7 +20,7 @@ const Header = ({ className }) => {
           <div className={cl.chapter}>Контакты</div>
         </div>
       </div>
-      <DropList isDropListOpened={isDropListOpened} />
+      <DropList isDropListOpened={isDropListOpened} setDropListOpened={setDropListOpened}/>
     </header>
   )
 }
