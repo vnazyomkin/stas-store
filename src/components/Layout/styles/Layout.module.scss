@@ -1,4 +1,6 @@
 $header-height: 80px;
+$footer-height: 80px;
+$footer-margin-top: 10px;
 
 // .main {
 //   background-color: blanchedalmond;
@@ -8,6 +10,7 @@ $header-height: 80px;
   margin: 0 auto;
   padding-top: $header-height;
   max-width: 1200px;
+  // border-bottom: 1px solid lightgray;
 }
 
 .header {
@@ -18,5 +21,15 @@ $header-height: 80px;
 
   font-size: 20px;
   font-weight: 600;
-  // border-bottom: 2px solid darkcyan;
+  border-bottom: 1px solid lightgray;
+}
+
+.main {
+  min-height: calc(100% - #{$footer-height} - #{$footer-margin-top});
+}
+
+.footer {
+  height: $footer-height;
+  margin-top: $footer-margin-top;
+  border-top: 1px solid lightgray;
 }

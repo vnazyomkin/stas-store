@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
           {children}
         </div>
       </main>
-      <footer>FOOTER</footer>
+      <footer className={cl.footer}>FOOTER</footer>
     </>
   )
 }

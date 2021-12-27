@@ -5,7 +5,7 @@ import cl from './Cards.module.scss'
 // const getClass = (el, mod) => `card${el ? '__' + el : ''}${mod ? '_' + mod : ''}`
 
 const Cards = ({ cards }) => {
-  // useStyles(s)
+  
   return (
     <div className={cl.cards}>
     {cards.map(({ picture: pictures, $: attributes, name, price_Roznica_Web: prices, vendorCode, quantity }) => (
